@@ -33,8 +33,10 @@ function App() {
 	}
 	
 	const calculate = () => {
-		setCalc(eval(calc).toString());
-	}
+		if(calc > 0 ) {
+			setCalc(eval(calc).toString());
+		}
+		else window.alert('calc is empty')
 
 	const deleteLast = () => {
 		if (calc == '') {
